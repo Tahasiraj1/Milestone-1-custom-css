@@ -1,0 +1,153 @@
+/* Best selling */
+
+/* Main container */
+.bestselling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .best-selling-products {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  @media (min-width: 320px) {
+    .best-selling-products {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .best-selling-products {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+  }
+  
+  .best-selling-1,
+  .best-selling-2,
+  .best-selling-3 {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Headings */
+  .bestselling-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #065f46;
+    margin-bottom: 24px;
+  }
+  
+  .bestselling-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    color: #065f46;
+    margin-bottom: 40px;
+  }
+  
+  /* Carousel container */
+  .carousel-container {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Carousel items */
+  .carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .carousel-item img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  /* Price and rating section */
+  .carousel-price-rating {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .carousel-price-rating p {
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .divider {
+    width: 2px;
+    height: 24px;
+    background-color: #065f46;
+  }
+  
+  .carousel-rating {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .carousel-rating .star-icon {
+    color: #FFA500;
+    margin-right: 4px;
+  }
+  
+  
+  /* Button styles */
+  .explore-button {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    background-color: #f0fdf4;
+    border: 1px solid #065f46;
+    color: black;
+    padding: 12px 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .explore-button:hover {
+    background-color: #065f46;
+    color: white;
+  }
+  
+  /* Divider line */
+  .divider-line {
+    width: 100%;
+    margin-top: 40px;
+    height: 4px;
+    background-color: #065f46;
+  }

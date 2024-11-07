@@ -1,0 +1,75 @@
+/* Container for the contact section */
+.contact-container {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9f99d;
+  }
+  
+  /* Content container for the form */
+  .contact-content {
+    width: 100%;
+    max-width: 40rem; /* max-w-2xl */
+  }
+  
+  /* Heading styling */
+  .contact-heading {
+    padding: 0.25rem 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.875rem; /* text-3xl */
+    color: #065f46; /* text-emerald-800 */
+  }
+  
+  /* Form container styling */
+  .contact-form {
+    height: 24rem; /* h-96 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border: 2px solid #047857; /* border-emerald-700 */
+    background-color: rgba(127, 250, 127, 0.55); /* bg-opacity-55 */
+  }
+  
+  /* Label spacing for elements below the first */
+  .label-spacing {
+    margin-top: 1rem; /* mt-4 */
+  }
+  
+  /* Input and Textarea styling */
+  .contact-input,
+  .contact-textarea {
+    margin-top: 0.5rem; /* mt-2 */
+    padding: 0.5rem;
+    background-color: #a0f3b7; /* bg-emerald-100 */
+    border-radius: 0; /* rounded-none */
+    width: 100%;
+  }
+  
+  /* Button styling */
+  .contact-button {
+    margin-top: 1rem;
+    width: 9rem; /* w-36 */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 1rem;
+    background-color: #f7fee7; /* bg-lime-100 */
+    border: 1px solid #065f46; /* border-emerald-800 */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect for button */
+  .contact-button:hover {
+    background-color: #065f46; /* hover:bg-emerald-800 */
+    color: white; /* hover:text-white */
+  }
+  

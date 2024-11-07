@@ -2,20 +2,275 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Header */
+.header {
+  font-family: 'Poppins', sans-serif;
+  animation: slideInFromTop 0.3s ease;
+  background-color: #bef264; /* lime-300 */
+  border: 1px solid #065f46; /* emerald-900 */
+  font-size: 1.25rem; /* text-xl */
+  width: 100%;
+  height: 80px; /* h-20 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25); /* drop-shadow-2xl */
+  color: #000000;
+  padding: 0 2rem; /* px-8 */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  opacity: 0.7;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Logo */
+.header-logo {
+  font-weight: bold;
+  font-size: 2rem; /* text-2xl */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none; /* hidden on smaller screens */
+  font-weight: 600; /* font-semibold */
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 1rem; /* gap-4 */
+}
+
+/* Icons and Menu Button */
+.icon-container {
+  display: flex;
+  gap: 1rem; /* gap-4 */
+  align-items: center;
+}
+
+.icon {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+}
+
+/* Hamburger Menu Button */
+.menu-button {
+  background: transparent;
+}
+
+.menu-button:hover {
+  background: transparent;
+}
+
+/* Responsive Styles for Large Screens */
+@media (min-width: 1024px) {
+  .nav-links {
+    display: block; /* show links on larger screens */
+  }
+  .menu-button {
+    display: none;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Mobile Dropdown Menu */
+.mobile-menu {
+  animation: slideInFromBottom 0.3s ease;
+  position: absolute;
+  top: 80px; /* Below header */
+  right: 0.5rem; /* right-2 */
+  background-color: #a3e635; /* lime-400 */
+  border: 1px solid #065f46; /* emerald-950 */
+  border-radius: 0.5rem; /* rounded-lg */
+  padding: 0.5rem 0; /* Adjusted padding for a balanced look */
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mobile-menu li {
+  padding: 0.5rem 1rem; /* px-4 and pt-2/pb-2 */
+}
+
+.mobile-menu li + li {
+  margin-top: 0.5rem;
+}
+
+.mobile-menu hr {
+  width: 100%;
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+/* Footer */
+
+.footer-container {
+  display: flex;
+  padding: 0 32px;
+  height: 80px;
+  background-color: #bef264; /* lime-300 */
+  border: 1px solid #d1d5db; /* Tailwind's default border color */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container h2 {
+  display: flex;
+  gap: 8px; /* To mimic `sm:flex-col md:flex-row` responsiveness */
+  font-size: 1rem; /* Adjust as needed */
+  color: #000; /* Default black text */
+}
+
+.icon-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-facebook {
+  color: #1877f2; /* Facebook blue */
+}
+
+.icon-instagram {
+  color: #e1306c; /* Instagram pink */
+}
+
+.icon-whatsapp {
+  color: #25d366; /* WhatsApp green */
+}
+
+.icon:active {
+  transform: scale(0.95);
+}
+
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 3.5rem; /* px-14 py-20 */
+  background-color: #d9f99d; /* lime-200 */
+}
+
+/* Medium Screen (md) - Row Layout */
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+  }
+}
+
+/* Large Screen (lg) - Adjust Padding */
+@media (min-width: 1024px) {
+  .hero-section {
+    padding-left: 9rem; /* lg:px-36 */
+    padding-right: 9rem;
+  }
+}
+
+/* Text Container */
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 1rem; /* mr-4 */
+}
+
+.hero-title {
+  font-family: 'Rufina', serif;
+  font-size: 3.75rem; /* text-6xl */
+  margin-bottom: 1.5rem; /* mb-6 */
+  color: #065f46; /* emerald-800 */
+  line-height: 1.2; /* Adjust line-height for better spacing */
+}
+
+.hero-description {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1.5rem; /* mb-6 */
+  color: #065f46; /* emerald-800 */
+}
+
+/* Explore Button */
+.explore-button {
+  width: 150px;
+  height: 54px;
+  background-color: #ecfccb; /* lime-100 */
+  border: 1px solid #065f46; /* emerald-800 */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25); /* drop-shadow-2xl */
+  border-radius: 0;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #065f46; /* emerald-800 */
+  color: white;
+}
+
+/* Small Screen Margin */
+@media (max-width: 639px) {
+  .explore-button {
+    margin-bottom: 5rem; /* sm:mb-20 */
+  }
+}
+
+/* Image */
+.hero-image {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25); /* drop-shadow-2xl */
+  border-radius: 0;
+}
+
+/* Medium Screen Image */
+@media (min-width: 768px) {
+  .hero-image {
+    width: 400px;
+    height: 500px; /* md:w-[400px] md:h-[500px] */
+  }
+}
+
+/* Large Screen Image */
+@media (min-width: 1024px) {
+  .hero-image {
+    width: 100%;
+    height: 600px; /* lg:w-full lg:h-[600px] */
+  }
 }
